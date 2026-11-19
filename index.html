@@ -4,66 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jawad Smlali">
-    <title>Food House</title>
-    
-    <!-- ربط ملف CSS الخارجي -->
+    <meta name="description" content="Food House - Restaurant de cuisine marocaine et internationale">
+    <title>Food House - Restaurant</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- HEADER -->
+
+  <!-- HEADER -->
   <header>
-    <h1>Food House</h1>
-    <p>Bienvenue dagvvvns notre restaurant!</p>
-    <nav aira-labele= "Navigation menu">
-    <a href="#accueil">Accueil</a>
-    <a href="#menu">Notre Menu</a>
-    <a href="#reservation">Réservation</a>
-    <a href="#contact">Contact</a>
+    <div class="header-content">
+      <h1>🍽️ Food House</h1>
+      <p>Bienvenue dans notre restaurant!</p>
+      <nav aria-label="Navigation menu">
+        <a href="#accueil">Accueil</a>
+        <a href="#menu">Notre Menu</a>
+        <a href="#reservation">Réservation</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
+
   <!-- MAIN -->
   <main>
-    <!-- SECTION  -->
-    <section id ="accueil">
-      <h2>Bienvenue au Food House.</h2>
-    <p>Un restaurant spécialisé dans la cuisine marocaine et internationale, proposant des plats délicieux préparés avec des intgrédients frais.</p>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr0D6YVxbyTDuxfvZccHqkinpOc_MvhDJ9Z_VrrWjMOw&s=10" alt="photo" width="200" height="200">
-    <button>Réservez</button>
-      
+    <!-- SECTION ACCUEIL -->
+    <section id="accueil">
+      <h2>Bienvenue au Food House</h2>
+      <p>Un restaurant spécialisé dans la cuisine marocaine et internationale, proposant des plats délicieux préparés avec des ingrédients frais.</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr0D6YVxbyTDuxfvZccHqkinpOc_MvhDJ9Z_VrrWjMOw&s=10" alt="Plat du restaurant Food House" width="200" height="200">
+      <br><br>
+      <a href="#reservation" class="btn">Réservez</a>
     </section>
+
     <!-- SECTION MENU -->
-    <section id ="menu">
+    <section id="menu">
       <h2>Notre Menu</h2>
-      
+      <div class="menu-grid">
+        <div class="menu-item">
+          <h3>Tajine Marocain</h3>
+          <p>Tajine traditionnel avec poulet, légumes et épices.</p>
+          <span class="price">80 DH</span>
+        </div>
+        <div class="menu-item">
+          <h3>Couscous Royal</h3>
+          <p>Couscous avec viande, légumes et bouillon parfumé.</p>
+          <span class="price">90 DH</span>
+        </div>
+        <div class="menu-item">
+          <h3>Pastilla</h3>
+          <p>Pastilla au poulet et amandes, spécialité marocaine.</p>
+          <span class="price">70 DH</span>
+        </div>
+        <div class="menu-item">
+          <h3>Pizza Margherita</h3>
+          <p>Pizza italienne avec tomate, mozzarella et basilic.</p>
+          <span class="price">60 DH</span>
+        </div>
+        <div class="menu-item">
+          <h3>Burger Maison</h3>
+          <p>Burger avec steak, fromage, salade et frites.</p>
+          <span class="price">55 DH</span>
+        </div>
+        <div class="menu-item">
+          <h3>Salade César</h3>
+          <p>Salade fraîche avec poulet grillé et sauce césar.</p>
+          <span class="price">45 DH</span>
+        </div>
+      </div>
     </section>
+
     <!-- SECTION RÉSERVATION -->
-    <section id ="reservation">
+    <section id="reservation">
       <h2>Réservation</h2>
-      
+      <p>Réservez votre table dès maintenant!</p>
+      <form action="#" method="post" class="reservation-form">
+        <fieldset>
+          <legend>Informations Personnelles</legend>
+          <p>
+            <label for="nom">Nom</label><br>
+            <input type="text" id="nom" name="nom" placeholder="Ex: Jawad" minlength="3" maxlength="10" required>
+          </p>
+          <p>
+            <label for="prenom">Prénom</label><br>
+            <input type="text" id="prenom" name="prenom" placeholder="Ex: Smlali" minlength="3" maxlength="10" required>
+          </p>
+          <p>
+            <label for="email">E-mail</label><br>
+            <input type="email" id="email" name="email" placeholder="exemple@gmail.com" required>
+          </p>
+          <p>
+            <label for="date">Date de réservation</label><br>
+            <input type="date" id="date" name="date" required>
+          </p>
+          <p>
+            <label for="personnes">Nombre de personnes</label><br>
+            <input type="number" id="personnes" name="personnes" min="1" max="20" value="2" required>
+          </p>
+          <p>
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" rows="4" placeholder="Votre message..." maxlength="200"></textarea>
+          </p>
+          <button type="submit" class="btn">Envoyer la réservation</button>
+        </fieldset>
+      </form>
     </section>
-    
+
     <!-- CONTACT -->
-    <section id ="contact">
-      <h2>Contact Me</h2>
-      <p>Profil GitHube: <a href="https://github.com/jawadsmlali4-prog">Jawad Github</a></p>
-      <p>Profil Instagram: <a href="https://www.instagram.com/jawad_smlali_?lqvp=MXhubGt0a2RjOXMyZg==">jawad_smlali_</a></p>
-      <p>E-mail: <a href="jawadsmlali4@gmail.com">jawadsmlali4@gmail.com</a></p>
-      
-      
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>📱 Profil GitHub : <a href="https://github.com/jawadsmlali4-prog" target="_blank">Jawad Github</a></p>
+      <p>📸 Profil Instagram : <a href="https://www.instagram.com/jawad_smlali_" target="_blank">jawad_smlali_</a></p>
+      <p>✉️ E-mail : <a href="mailto:jawadsmlali4@gmail.com">jawadsmlali4@gmail.com</a></p>
     </section>
-    <!-- INFO-PERSONNELLES -->
-    <form action="#" method="post">
-      <fieldset>
-        <legend>Information Personnelles</legend>
-        <p><label for ="nom">Nom</label><br><input type ="text" id ="nom" name ="nom" placeholder ="Ex:jawad" min ="3" max="10" required></p>
-        <p><label for ="nom">last name</label><br><input type ="text" id ="nom" name ="nom" placeholder ="Ex:smlali" min ="3" max="10" required></p>
-        <p><label for ="email">E-mail</label><br><input type ="email" id ="email" name ="email" placeholder ="exemple@gmail.com" min ="3" max="60" required></p>
-        <p><label for ="message">Message</label><br><input type ="message" id ="message" name ="message" placeholder ="           hello        " min ="4" max="70" required></p>
-      </fieldset>
-    
   </main>
+
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 Food House-Tous droits reserves.</p>
+    <p>&copy; 2026 Food House - Tous droits réservés.</p>
   </footer>
+<script src="script.js"></script>
 </body>
 </html>
